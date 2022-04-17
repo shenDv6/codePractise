@@ -4,7 +4,7 @@ using namespace std;
 
 class Solution {
 public:
-  int longestCommonSubsequence(string text1, string text2) {
+  vector<vector<int>> longestCommonSubsequence(string text1, string text2) {
     int m = text1.size(), n = text2.size();
     vector<vector<int>> dp(m + 1, vector<int>(n + 1, 0));
     for (int i = 1; i < m + 1; i++) {
@@ -16,7 +16,7 @@ public:
         }
       }
     }
-    return dp[m][n];
+    return dp;
   }
 };
 
@@ -25,7 +25,7 @@ int main() {
   string text1 = "alsdfjcovj";
   string text2 = "laivlkajladf";
   Solution s1;
-  int res = s1.longestCommonSubsequence(text1, text2);
-  cout << res << endl;
+  vector<vector<int>> table = s1.longestCommonSubsequence(text1, text2);
+  cout << table[text1.size()][text2.size()] << endl;
   return 0;
 }
