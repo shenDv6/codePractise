@@ -3,14 +3,14 @@
 using namespace std;
 
 
-// struct DLinkNode {
-//   int key;
-//   int val;
-//   DLinkNode *pre;
-//   DLinkNode *next;
-//   DLinkNode(int x, int y, DLinkNode *_pre, DLinkNode *_next) : key(x), val(y), pre(_pre), next(_next) {}
-//   DLinkNode(int x, int y) : key(x), val(y), pre(nullptr), next(nullptr) {}
-// };
+struct DLinkNode {
+  int key;
+  int val;
+  DLinkNode *pre;
+  DLinkNode *next;
+  DLinkNode(int x, int y, DLinkNode *_pre, DLinkNode *_next) : key(x), val(y), pre(_pre), next(_next) {}
+  DLinkNode(int x, int y) : key(x), val(y), pre(nullptr), next(nullptr) {}
+};
 
 // class Solutuon {
 // private:
